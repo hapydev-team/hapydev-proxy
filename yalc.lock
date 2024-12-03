@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "hapydev-runtime": {
-      "signature": "7e84fc01215106713c3689ee3cf923bf",
-      "file": true
-    }
-  }
-}
