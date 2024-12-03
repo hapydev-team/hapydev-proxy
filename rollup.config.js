@@ -11,6 +11,6 @@ export default [
       file: 'dist/index.js',
       format: 'cjs',
     },
-    plugins: [resolve(), typescript(), commonjs(), json()],
+    plugins: [resolve(), commonjs(), typescript(), json()],
   },
 ];

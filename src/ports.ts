@@ -1,6 +1,6 @@
 const cProcess = require('child_process');
 
-export const DEFAULT_PORT = 30001;
+export const DEFAULT_PORT = 6003;
 
 export const clearUsedPort = function (port) {
   const exec = `lsof -i:${port}  | tail -1 | tr -s ' ' | cut -d ' ' -f 2`;
