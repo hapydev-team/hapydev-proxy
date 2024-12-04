@@ -5,11 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "tsx watch src/index.ts",
+    "start:server": "pm2 reload pm2.conf.json",
     "test": "node ./dist/index.js",
     "build": "rollup -c rollup.config.js",
-    "dbuild": "docker build -t apimis-runner:latest . "
+    "dbuild": "docker build -t hapydev-runner:latest . "
   },
-  "author": "Apimis-Team",
+  "author": "Hapydev-Team",
   "license": "ISC",
   "dependencies": {
     "@rollup/plugin-commonjs": "^28.0.1",
