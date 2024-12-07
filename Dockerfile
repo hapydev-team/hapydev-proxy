@@ -11,6 +11,6 @@ WORKDIR /app
 COPY package.json  ./
 COPY dist ./dist
 COPY --from=dependencies /app/node_modules ./node_modules  
-EXPOSE 30001 
+EXPOSE 6003 
 
 CMD ["npm", "run", "test" ]

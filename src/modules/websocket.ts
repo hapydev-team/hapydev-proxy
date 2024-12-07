@@ -1,5 +1,5 @@
 import { isUndefined } from 'lodash';
-import { ApimisRunner } from 'hapydev-runtime';
+import { ApimisRunner } from 'hapydev-runtime-v2';
 
 import dayjs from 'dayjs';
 

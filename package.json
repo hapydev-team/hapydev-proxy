@@ -1,6 +1,6 @@
 {
   "name": "hapydev-proxy",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "hapydev-proxy",
   "main": "dist/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "dayjs": "^1.11.13",
     "express": "^4.21.1",
     "google-protobuf": "^3.21.4",
-    "hapydev-runtime": "^0.0.9",
+    "hapydev-runtime-v2": "^2.0.1",
     "json5": "^2.2.3",
     "lodash": "^4.17.21",
     "socket.io": "^4.8.1",

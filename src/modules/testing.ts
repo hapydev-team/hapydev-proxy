@@ -1,6 +1,6 @@
 import { isUndefined } from 'lodash';
 
-import { ApimisRunner } from 'hapydev-runtime';
+import { ApimisRunner } from 'hapydev-runtime-v2';
 
 const handleTesting = (pools: { [runtime_id: string]: any }, emitter, params) => {
   const { action, runtime_id, data } = params;
