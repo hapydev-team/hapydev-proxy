@@ -74,7 +74,7 @@ clearUsedPort(port).then((res) => {
   try {
     server.listen(port, '0.0.0.0', () => {
       app.get('/', (req, res) => {
-        res.send('Hello World!');
+        res.send('hapydev代理已启动!');
       });
     });
     console.log(`Server listening on ${port}...`);
