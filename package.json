@@ -22,7 +22,7 @@
     "dayjs": "^1.11.13",
     "express": "^4.21.1",
     "google-protobuf": "^3.21.4",
-    "hapydev-runtime-v2": "^2.0.1",
+    "hapydev-runtime-v2": "^2.0.3",
     "json5": "^2.2.3",
     "lodash": "^4.17.21",
     "socket.io": "^4.8.1",
