@@ -3,4 +3,3 @@ node_modules
 .yalc
 pnpm-lock.yaml
 log
-dist
