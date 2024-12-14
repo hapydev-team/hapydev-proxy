@@ -10,7 +10,7 @@
     "build": "rollup -c rollup.config.js",
     "build:pre-docker": "docker buildx create --name mybuilder --use",
     "previw:docker": "docker build  -t hapydev/hapydev-proxy:latest  .",
-    "build:docker": "docker buildx build --load --platform linux/amd64,linux/arm64 -t hapydev/hapydev-proxy:1.0.15  -t hapydev/hapydev-proxy:latest  ."
+    "build:docker": "docker buildx build --push --platform linux/amd64,linux/arm64 -t hapydev/hapydev-proxy:1.0.15 -t hapydev/hapydev-proxy:latest  ."
   },
   "author": "Hapydev-Team",
   "license": "Apache-2.0",
