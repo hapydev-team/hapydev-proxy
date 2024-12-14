@@ -6,9 +6,11 @@
   "scripts": {
     "start": "tsx watch src/index.ts",
     "start:server": "pm2 reload pm2.conf.json",
-    "test": "node ./dist/index.js",
+    "server": "node ./dist/index.js",
     "build": "rollup -c rollup.config.js",
-    "dbuild": "docker build -t hapydev-runner:latest . "
+    "build:pre-docker": "docker buildx create --name mybuilder --use",
+    "previw:docker": "docker build  -t hapydev/hapydev-proxy:latest  .",
+    "build:docker": "docker buildx build --load --platform linux/amd64,linux/arm64 -t hapydev/hapydev-proxy:1.0.15  -t hapydev/hapydev-proxy:latest  ."
   },
   "author": "Hapydev-Team",
   "license": "Apache-2.0",

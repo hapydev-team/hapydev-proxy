@@ -1,16 +1,15 @@
-FROM node:20.9.0-alpine3.18 as dependencies
+FROM node:20.18.1-alpine3.21 as dependencies
 RUN apk --no-cache add --virtual .builds-deps build-base python3
 WORKDIR /app
-COPY package*.json ./
+COPY package.json ./
+COPY dist ./dist
 RUN yarn global add node-gyp
 RUN yarn install --production  
 
 
-FROM node:20.9.0-alpine3.18 as production
+FROM  node:20.18.1-alpine3.21 as production
 WORKDIR /app
-COPY package.json  ./
-COPY dist ./dist
-COPY --from=dependencies /app/node_modules ./node_modules  
+COPY --from=dependencies /app .
 EXPOSE 6003 
 
-CMD ["npm", "run", "test" ]
+CMD ["npm", "run", "server" ]
