@@ -1,5 +1,5 @@
 import { isUndefined } from 'lodash';
-import { ApimisRunner } from 'hapydev-runtime-v2';
+const { ApimisRunner } = require('hapydev-runtime');
 import dayjs from 'dayjs';
 
 const handleWebsocket = (pools: { [runtime_id: string]: any }, emitter, params) => {

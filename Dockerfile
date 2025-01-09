@@ -1,10 +1,9 @@
 FROM node:20.18.1-alpine3.21 as dependencies
-RUN apk --no-cache add --virtual .builds-deps build-base python3
 WORKDIR /app
-COPY package.json ./
-COPY dist ./dist
-RUN yarn global add node-gyp
-RUN yarn install --production  
+COPY  . .
+RUN npm install pnpm -g
+RUN pnpm install
+RUN npm run build
 
 
 FROM  node:20.18.1-alpine3.21 as production

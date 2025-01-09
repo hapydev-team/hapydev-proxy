@@ -1,4 +1,4 @@
-import { ApimisRunner } from 'hapydev-runtime-v2';
+import { ApimisRunner } from 'hapydev-runtime';
 
 const { WebSocketRunner, SocketIORunner, HttpRunner, GrpcRunner, TestingRunner } = ApimisRunner;
 
