@@ -17,6 +17,7 @@ const handleHttp = (pools: { [runtime_id: string]: any }, emitter, params) => {
       onConsole: handleSendHttpData.bind(null, 'console'),
       onHttpErrpr: handleSendHttpData.bind(null, 'error'),
       onResponse: handleSendHttpData.bind(null, 'response'),
+      onStreamStart: handleSendHttpData.bind(null, 'stream-start'),
       onStream: handleSendHttpData.bind(null, 'stream'),
       onStreamEnd: handleSendHttpData.bind(null, 'stream-end'),
       onVisualizing: handleSendHttpData.bind(null, 'visualiz'),
