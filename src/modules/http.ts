@@ -33,7 +33,9 @@ const handleHttp = (pools: { [runtime_id: string]: any }, emitter, params) => {
       if (isFunction(pools?.[runtime_id]?.stop)) {
         pools?.[runtime_id]?.stop?.();
       }
-      pools[runtime_id].run(collection, options);
+      pools[runtime_id].run(collection, options).then(() => {
+        delete pools[runtime_id];
+      });
     } catch (err) {
       delete pools[runtime_id];
       emitter.emit('http', 'error', runtime_id, err?.message);
