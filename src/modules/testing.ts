@@ -26,7 +26,9 @@ const handleTesting = (pools: { [runtime_id: string]: any }, emitter, params) =>
 
   if (action === 'execute') {
     pools[runtime_id] = getRunner(runtime_id);
-    pools[runtime_id].execute(runtime_id, data.testing, data.options);
+    pools[runtime_id].execute(runtime_id, data.testing, data.options).then(() => {
+      delete pools[runtime_id];
+    });
     return;
   }
 };
