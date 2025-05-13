@@ -33,11 +33,13 @@ const handleWebsocket = (pools: { [runtime_id: string]: any }, emitter, params) 
   //关闭链接
   if (action === 'close-connection') {
     pools?.[runtime_id]?.closeConnection();
+    delete pools?.[runtime_id];
     return;
   }
   //取消链接
   if (action === 'cancel-connection') {
     pools?.[runtime_id]?.cancelConnection();
+    delete pools?.[runtime_id];
     return;
   }
 
